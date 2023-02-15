@@ -1,4 +1,5 @@
 import { doUpdate_sup } from "./doUpdate_sup.js";
+import { SMP_sup } from "./SMP.js";
 
 export default function showUpdatePage(sup_id = null) {
 
@@ -44,7 +45,7 @@ export default function showUpdatePage(sup_id = null) {
                     });
                     str+="<div class='two_buttons d-flex justify-content-center mt-4'>\
                                <button class='btn-dark mx-3' id=doUpdate>修改</button>\
-                               <button class='btn-dark mx-3'>返回</button>\
+                               <button class='btn-dark mx-3' id=back>返回</button>\
                           </div>"
 
                     str+="</div>"
@@ -54,11 +55,13 @@ export default function showUpdatePage(sup_id = null) {
                     document.getElementById("doUpdate").onclick = function () {
                         doUpdate_sup();
                     }
+                    document.getElementById("back").onclick=function(){
+                        SMP_sup();
+                    }
+                   
                     break;
                 default:
                     document.getElementById("content").innerHTML = response['message'];
-                    //"idvalue:"+idValue+"typeof(idvalue):"+typeof(idValue);
-                    //
                     break;
             }
         })

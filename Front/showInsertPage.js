@@ -1,4 +1,5 @@
 import { doInsert_good,doInsert_sup} from "./doInsert.js";
+import { SMP_sup } from "./SMP.js";
 
 //供應商
 export function showInsertPage_sup(){
@@ -26,7 +27,7 @@ export function showInsertPage_sup(){
     </div>\
     <div class='two_buttons d-flex justify-content-center mt-4'>\
       <button class='btn-dark mx-3' id=doinsert>新增</button>\
-      <button class='btn-dark mx-3'>返回</button>\
+      <button class='btn-dark mx-3' id=back>返回</button>\
     </div>\
   </div>";
   
@@ -34,6 +35,9 @@ export function showInsertPage_sup(){
     document.getElementById("doinsert").onclick = function(){
         doInsert_sup();
     };
+    document.getElementById("back").onclick=function(){
+      SMP_sup();
+    }
 }
 
 //物料
