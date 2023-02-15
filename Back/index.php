@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin:*');
 require_once("Router.php");
 
 if(isset($_GET['action']))
@@ -10,14 +10,16 @@ else
 $router = new Router();
 
 $router->register('getSup','supplier', 'getSup');
-$router->register('newSup','Supplier', 'newSup');
+$router->register('newSup','supplier', 'newSup');
 $router->register('removeSup','supplier', 'removeSup');
 $router->register('updateSup','supplier', 'updateSup');
+
 
 $router->register('getGood','good', 'getGood');
 $router->register('newGood','good', 'newGood');
 $router->register('removeGood','good', 'removeGood');
 $router->register('updateGood','good', 'updateGood');
+$router->register('getGood_detail','good','getGood_detail');
 
 $router->register('getInput','Input', 'getInput');
 $router->register('newInput','input', 'newInput');
