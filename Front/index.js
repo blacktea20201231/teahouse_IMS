@@ -3,8 +3,8 @@ import {showInsertPage_sup,showInsertPage_good} from './showInsertPage.js';
 import {doSelect_good,doSelect_sup} from './doSelect.js';
 import {showUpdateList, showDeleteList} from './showList.js';
 import { SMP_sup } from './SMP.js';
-import { showInsertPage_input } from '../showInsertPage_input.js';
-import { showInsertPage_output } from '../showinsertPage_output.js';
+import { showInsertPage_input } from './showInsertPage_input.js';
+import { showInsertPage_output } from './showinsertPage_output.js';
 
 
 
